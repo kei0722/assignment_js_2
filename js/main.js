@@ -6,7 +6,11 @@ document.querySelector('button').addEventListener('click', () => {
 
   function addNum (a, b) {
     const li = document.createElement('li');
-    li.textContent = a + b;
+    if(b === "") {
+      li.textContent = a;
+    } else {
+      li.textContent = `${a} ${b}`;
+    }
     document.querySelector('ul').appendChild(li);
   }
 
